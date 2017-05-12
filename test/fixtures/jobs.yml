@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  jobId: 1
+  jobDesc: MyText
+  jobTypeId: 1
+
+two:
+  jobId: 1
+  jobDesc: MyText
+  jobTypeId: 1
