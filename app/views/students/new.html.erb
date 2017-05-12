@@ -1,0 +1,52 @@
+<h1>Student Sign Up</h1>
+
+<%= link_to "Back", login_index_path %>
+<%= form_for :student do |f| %>
+
+<% if @student.errors.any? %>
+    <div id="error_explanation">
+        <h3>
+            Could not register student!
+                    
+            </h3>
+        <ul>
+    <%@student.errors.messages.values.each do |msg| %>
+        <%msg.each do  |m| %>
+          <li><%= m %></li>
+        <%end %>  
+      <% end %>
+  </ul>
+
+</div>
+<% end %>
+      
+      <p>
+        <%= f.label "JCU Email" %><br>
+          
+          <%= f.text_field :email %>
+            
+      </p>
+
+    <p>
+      <%= f.label "First Name" %><br>
+
+        <%= f.text_field :firstName %>
+
+      </p>
+    <p>
+      <%= f.label "Last Name" %><br>
+
+        <%= f.text_field :lastName %>
+
+      </p>
+      
+   
+      
+    <p>
+      <%= f.submit "Submit" %>
+
+      </p>
+      
+<% end %>
+        
+        

@@ -1,0 +1,2 @@
+class StudentToSkill < ApplicationRecord
+end

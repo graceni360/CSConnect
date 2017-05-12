@@ -1,0 +1,18 @@
+<h1><strong><%= @student.firstName %> has been registered. </strong></h1>
+
+
+<p>
+  <strong>Email: </strong>
+<%= @student.email %>
+</p>
+
+<p>
+  <strong>Name: </strong>
+<%= @student.firstName %>
+   
+<%= @student.lastName %>
+  
+</p>
+
+<br/>
+<%= link_to "Back to Login", login_index_path %>

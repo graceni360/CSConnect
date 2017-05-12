@@ -1,0 +1,47 @@
+<h1>Admin Login </h1>
+
+<%= link_to "Back", login_index_path %>
+<%= form_for :adminLogin do |f| %>
+  <% if @adminLogin.errors.any? %>
+    <div id="error_explanation">
+        <h3>
+            You cannot proceed
+                    
+            </h3>
+        <ul>
+    <%@adminLogin.errors.messages.values.each do |msg| %>
+        <%msg.each do  |m| %>
+          <li><%= m %></li>
+        <%end %>  
+      <% end %>
+  </ul>
+      
+</div>
+<% end %>
+  <br/>
+  <%= f.label "Username" %>
+  <%= f.text_field :username %>
+  <br/>
+  <br/>
+
+  <%= f.label "Password" %>
+  <%= f.password_field :password %>
+  <br/>
+  <br/>
+
+  
+  <br/>
+  <!--<br/>
+      <%= f.label "Optional File Upload" %>
+
+    <%= f.file_field :fileUp %>
+
+    <br/>
+        -->
+    
+  <br/>
+  <br/>
+    
+  <%= f.submit "Sign In" %>
+  
+<% end %>

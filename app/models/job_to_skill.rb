@@ -1,0 +1,2 @@
+class JobToSkill < ApplicationRecord
+end

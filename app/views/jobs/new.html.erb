@@ -1,0 +1,58 @@
+<h1>Request Form</h1>
+
+<%= link_to "Back to home", login_index_path %>
+<%= form_for :job do |f| %>
+
+<% if @job.errors.any? %>
+    <div id="error_explanation">
+        <h3>
+            Opportunity could not be sent out:
+          
+  </h3>
+        <ul>
+    <%@job.errors.messages.values.each do |msg| %>
+        <%msg.each do  |m| %>
+          <li><%= m %></li>
+        <%end %>  
+      <% end %>
+  </ul>
+      
+</div>
+<% end %>
+  <%= f.label "Opportunity Title" %>
+  <%= f.text_field :jobTitle %>
+  <br/>
+  <br/>
+
+  <%= f.label "Description" %>
+  <%= f.text_area :jobDesc, :size=>150 %>
+  <br/>
+  <br/>
+  <%= f.label "Opporunity Type" %>
+  <%= f.select :jobType, ['Full-Time','Part-Time','Internship', 'Co-Op', 'Event'] %>
+  
+  <br/>
+  <!--<br/>
+      <%= f.label "Optional File Upload" %>
+
+    <%= f.file_field :fileUp %>
+
+    <br/>
+        -->
+  <br/>
+    
+
+    <%= f.label "Opporunity Start Date" %>
+  <%= f.date_field :startDate %>
+
+  <br/>
+  <br/>
+
+  <%= f.label "Comments:" %>
+  <%= f.text_area :comments, :size=>150 %>
+  <br/>
+  <br/>
+    
+  <%= f.submit "Submit & Send" %>
+  
+<% end %>

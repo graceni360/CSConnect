@@ -1,0 +1,24 @@
+
+<%= stylesheet_link_tag  "login.scss" %>
+  <h1>Welcome to CS Connect!</h1>
+
+
+<body>
+	<h2> Students </h2>
+    <p>
+     <%=link_to '<button type = "button">Student Sign Up</button>'.html_safe, new_student_path %>
+    </p>
+
+    <br/>
+
+    </p>
+    <br/>
+    <br/>
+    <br/>
+    </body>
+		<h2> Administrators </h2>
+
+      <%=link_to '<button type = "button">New Opportunity</button>'.html_safe, admin_logins_new_path, id: "new_Opp_link" %>
+      
+
+  
