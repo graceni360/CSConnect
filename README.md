@@ -1,8 +1,13 @@
 # README
 
-* Ruby version
+* Rails version
 
 5.0.2
+
+* Ruby version
+
+2.2.6p396 (2016-11-15 revision 56800) [x64-mingw32]
+
 
 * System dependencies
 Windows. I'm sure it works on Mac as well but I have not tested.
