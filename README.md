@@ -10,9 +10,14 @@
 
 
 * System dependencies
+
+
 Windows. I'm sure it works on Mac as well but I have not tested.
 
+
 * Configuration
+
+
 1. Pull the project down from GitHub using git clone
 
 --cmd prompt--
@@ -24,6 +29,7 @@ Windows. I'm sure it works on Mac as well but I have not tested.
 5. Run the migrations 'rake db:migrate'
 
 * Deployment instructions
+
 --cmd prompt--
 
 
